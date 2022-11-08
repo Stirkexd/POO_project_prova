@@ -1,7 +1,11 @@
 import java.util.Scanner;
 class Main {
   Scanner ler = new Scanner(System.in);
-  int n;
+  Scanner lercpf = new Scanner(System.in);
+  Scanner lersenha = new Scanner(System.in);
+  int n;//numero da opcao de 1 a 15
+  int ncpf;//vai ler o cpf na primeira opcao
+  int nsenha;//vai ler a senha na segunda opcao
   public static void main(String[] args) {
         System.out.println("Por favor digite um numero de 1 a 15");
     
@@ -42,7 +46,8 @@ class Main {
     n = ler.nextInt();
     switch(n){
       case 1:
-
+      ncpf = lercpf.nextInt();
+      nsenha = lersenha.nextInt();
       break;
       case 2:
 
