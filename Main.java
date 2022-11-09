@@ -1,12 +1,25 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 class Main {
   Scanner ler = new Scanner(System.in);
   Scanner lercpf = new Scanner(System.in);
   Scanner lersenha = new Scanner(System.in);
   int n;//numero da opcao de 1 a 15
-  int ncpf;//vai ler o cpf na primeira opcao
-  int nsenha;//vai ler a senha na segunda opcao
+  String ncpf;//vai ler o cpf na primeira opcao
+  String nsenha;//vai ler a senha na segunda opcao
   public static void main(String[] args) {
+
+    List cpfcad = new ArrayList();//criação da lista de cpfs
+    cpfcad.add("10023764599");
+    cpfcad.add("20023764599");
+    cpfcad.add("30023764599");
+
+        List senhascad = new ArrayList();//criação da lista de senhas
+    senhascad.add("10023");
+    senhascad.add("64599");
+    senhascad.add("23764");
+    
         System.out.println("Por favor digite um numero de 1 a 15");
     
     System.out.println("----------------------");
@@ -47,10 +60,20 @@ class Main {
     switch(n){
       case 1:
       ncpf = lercpf.nextInt();
-      nsenha = lersenha.nextInt();
+      nsenha = lersenha.nextInt();  
+        if(senhascad.contains(nsenha)&&ncpf.contains(ncpf)){//confirma se a senha e o cpf estao corretos
+      nsenha.contains();
+      ncpf.contains();         
+      }else{
+          System.out.println("Cadastro invalido!");
+      }
+ 
       break;
       case 2:
-
+  ncpf = lercpf.nextInt();
+  cpfcad.add(ncpf);//cadastra um novo cpf
+  nsenha = lersenha.nextInt();
+  senhascad.add(nsenha);//cadastra uma nova senha      
       break;
       case 3:
 
